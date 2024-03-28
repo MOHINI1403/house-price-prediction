@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Heading styles */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Form styles */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body style="background-image: url('{{ url_for('static', filename='background.jpeg') }}');">
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <form action="/predict" method="post">
+            <!-- Input fields for features -->
+            <label for="number_of_bedrooms">Number of Bedrooms:</label>
+            <input type="number" id="number_of_bedrooms" name="number_of_bedrooms" required>
+
+            <label for="number_of_bathrooms">Number of Bathrooms:</label>
+            <input type="number" id="number_of_bathrooms" name="number_of_bathrooms" required>
+
+            <label for="living_area">Living Area:</label>
+            <input type="number" id="living_area" name="living_area" required>
+
+            <label for="lot_area">Lot Area:</label>
+            <input type="number" id="lot_area" name="lot_area" required>
+
+            <label for="number_of_floors">Number of Floors:</label>
+            <input type="number" id="number_of_floors" name="number_of_floors" required>
+
+            <label for="waterfront_present">Waterfront Present:</label>
+            <input type="number" id="waterfront_present" name="waterfront_present" required>
+
+            <label for="number_of_views">Number of Views:</label>
+            <input type="number" id="number_of_views" name="number_of_views" required>
+
+            <label for="condition_of_the_house">Condition Of The House:</label>
+            <input type="number" id="condition_of_the_house" name="condition_of_the_house" required>
+
+            <label for="grade_of_the_house">Grade Of The House:</label>
+            <input type="number" id="grade_of_the_house" name="grade_of_the_house" required>
+
+            <label for="area_of_the_house(excluding_basement)">Area of The House(excluding Basement):</label>
+            <input type="number" id="area_of_the_house(excluding_basement)" name="area_of_the_house(excluding_basement)" required>
+
+            <label for="area_of_the_basement">Area of The Basement:</label>
+            <input type="number" id="area_of_the_basement" name="area_of_the_basement" required>
+
+            <label for="built_year">Built Year:</label>
+            <input type="number" id="built_year" name="built_year" required>
+
+            <label for="renovation_year">Renovation Year:</label>
+            <input type="number" id="renovation_year" name="renovation_year" required>
+
+            <label for="postal_code">Postal Code:</label>
+            <input type="number" id="postal_code" name="postal_code" required>
+
+            <label for="lattitude">Lattitude:</label>
+            <input type="number" id="lattitude" name="lattitude" required>
+
+            <label for="longitude">Longitude:</label>
+            <input type="number" id="longitude" name="longitude" required>
+
+            <label for="living_area_renov">Living Area Renov:</label>
+            <input type="number" id="living_area_renov" name="living_area_renov" required>
+
+            <label for="lot_area_renov">Lot Area Renov:</label>
+            <input type="number" id="lot_area_renov" name="lot_area_renov" required>
+
+            <label for="number_of_schools_nearby">Number Of Schools Nearby:</label>
+            <input type="number" id="number_of_schools_nearby" name="number_of_schools_nearby" required>
+
+            <label for="distance_from_the_airport">Distance From The Airport:</label>
+            <input type="number" id="distance_from_the_airport" name="distance_from_the_airport" required>
+
+
+            
+
+
+            
+            
+            
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
