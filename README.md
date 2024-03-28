@@ -19,7 +19,7 @@ To get started with the project, follow these steps:
 1. Clone the repository to your local machine:
 
    ```
-   git clone https://github.com/your-username/house-price-prediction.git
+   git clone https://github.com/MOHINI1403/house-price-prediction.git
    ```
 
 2. Install the necessary dependencies:
@@ -31,7 +31,7 @@ To get started with the project, follow these steps:
 3. Run the Flask application:
 
    ```
-   python app.py
+   python deploy.py
    ```
 
 4. Open a web browser and go to `http://localhost:5000` to access the application.
@@ -40,7 +40,7 @@ To get started with the project, follow these steps:
 
 ## Project Structure
 
-- `app.py`: Main Flask application file containing routes for rendering the input form and processing predictions.
+- `deploy.py`: Main Flask application file containing routes for rendering the input form and processing predictions.
 - `templates/`: Directory containing HTML templates for rendering web pages.
   - `index.html`: HTML template for the input form page.
   - `result.html`: HTML template for displaying the prediction result page.
